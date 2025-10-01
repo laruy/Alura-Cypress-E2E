@@ -17,6 +17,7 @@
   "homepage": "https://github.com/laruy/Alura-Cypress-E2E#readme",
   "description": "",
   "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
     "cypress": "^13.6.4"
   }
 }
