@@ -1,5 +1,3 @@
-const { fakerPT_BR: faker } = require('@faker-js/faker');
-
 describe('Página de cadastro', () => {
 
     beforeEach(() => {

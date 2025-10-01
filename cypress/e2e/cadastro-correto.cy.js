@@ -17,6 +17,5 @@ describe('Página de cadastro', () => {
       cy.get('input[name="confirm_password"]').type(senha);
 
       cy.get('[data-test=submit-button]').click();
-
     })
   })
