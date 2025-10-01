@@ -9,7 +9,7 @@ describe('Página de cadastro', () => {
       });
 
       cy.visit('https://adopet-frontend-cypress.vercel.app');
-      cy.contains('a', 'Cadastrar').click();
+      cy.get('[data-test="register-button"]').click();
 
       cy.get('input[name="nome"]').type(faker.internet.username());
       cy.get('input[name="email"]').type(faker.internet.email());

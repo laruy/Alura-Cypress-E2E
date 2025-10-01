@@ -1,5 +1,3 @@
-const { fakerPT_BR: faker } = require('@faker-js/faker');
-
 describe('Página Inicial', () => {
 
     it('Visite a página de principal do AdoPet e clique no botão ‘Ver pets disponíveis para adoção”', () => {
