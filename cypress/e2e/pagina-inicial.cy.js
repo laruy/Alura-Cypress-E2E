@@ -11,6 +11,7 @@ describe('Página Inicial', () => {
             cy.location('pathname').should('eq', '/');
             cy.contains('a', 'Ver pets').click();
             cy.location('pathname').should('eq', '/home');
+            cy.get('.cards').should('be.visible');
         })
 
         it('Visite a página de principal do AdoPet e teste os botões header e elementos da tela', () => {
@@ -25,9 +26,7 @@ describe('Página Inicial', () => {
 
         it('Teste o login com um fluxo diferente', () => {
             cy.get('.header__message').click();
-            cy.get('[data-test="input-loginEmail"]').type('ana@email.com');
-            cy.get('[data-test="input-loginPassword"]').type('Senha123');
-            cy.get('[data-test="submit-button"]').click();  
+            cy.login('ana@email.com', 'Senha123')
             cy.location('pathname').should('eq', '/home');
         })
     })
