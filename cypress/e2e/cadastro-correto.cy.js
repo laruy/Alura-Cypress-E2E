@@ -8,14 +8,6 @@ describe('Página de cadastro', () => {
         prefix: 'A.1',                                 // garante os requisitos
       });
 
-      cy.visit('https://adopet-frontend-cypress.vercel.app');
-      cy.get('[data-test="register-button"]').click();
-
-      cy.get('input[name="nome"]').type(faker.internet.username());
-      cy.get('input[name="email"]').type(faker.internet.email());
-      cy.get('input[name="password"]').type(senha);
-      cy.get('input[name="confirm_password"]').type(senha);
-
-      cy.get('[data-test=submit-button]').click();
+      cy.cadastro(faker.internet.username(), faker.internet.email(), senha, senha)
     })
   })

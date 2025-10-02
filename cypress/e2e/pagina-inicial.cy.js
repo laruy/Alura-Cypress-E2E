@@ -37,9 +37,7 @@ describe('Página Inicial', () => {
         beforeEach('Realiza login', () => {
             cy.visit('https://adopet-frontend-cypress.vercel.app');
             cy.get('[data-test="login-button"]').click();
-            cy.get('[data-test="input-loginEmail"').type('laismaruyama@outlook.com');
-            cy.get('[data-test="input-loginPassword"]').type('Senha.123');
-            cy.get('[data-test="submit-button"]').click();
+            cy.login('laismaruyama@outlook.com', 'Senha.123')
             cy.get('.header__home').should('be.visible').click();
         })
 

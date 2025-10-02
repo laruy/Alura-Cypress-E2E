@@ -5,9 +5,7 @@ describe('Página de login', () => {
     })
 
     it('Deve preencher os campos do login corretamente e autenticar o usuário', () => {
-        cy.get('[data-test="input-loginEmail"').type('laismaruyama@outlook.com');
-        cy.get('[data-test="input-loginPassword"]').type('Senha.123');
-        cy.get('[data-test="submit-button"]').click();
+        cy.login('laismaruyama@outlook.com', 'Senha.123')
         cy.location('pathname').should('eq', '/home');
     })
 })

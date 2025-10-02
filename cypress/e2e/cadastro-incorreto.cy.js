@@ -14,10 +14,8 @@ describe('Página de cadastro', () => {
     })
 
     it('Preencher os campos do formulário incorretamente e exibir mensagens ao usuário', () =>{
-        cy.get('input[name="nome"]').type('lais');
-        cy.get('input[name="email"]').type('lais');
-        cy.get('input[name="password"]').type('123');
-        cy.get('input[name="confirm_password"]').type('456');
+
+        cy.cadastro('lais', 'lais', '123', '456')
 
         cy.get('[data-test=submit-button]').click();
 
