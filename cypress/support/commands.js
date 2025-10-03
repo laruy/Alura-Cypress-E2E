@@ -9,10 +9,10 @@ Cypress.Commands.add('cadastro', (nome, email, senha, confirmaSenha) => {
     cy.visit('https://adopet-frontend-cypress.vercel.app');
     cy.get('[data-test="register-button"]').click();
 
-    cy.get('input[name="nome"]').type(nome);
-    cy.get('input[name="email"]').type(email);
-    cy.get('input[name="password"]').type(senha);
-    cy.get('input[name="confirm_password"]').type(confirmaSenha);
+    cy.get('input[name="nome"]').clear().type(nome);
+    cy.get('input[name="email"]').clear().type(email);
+    cy.get('input[name="password"]').clear().type(senha);
+    cy.get('input[name="confirm_password"]').clear().type(confirmaSenha);
 
     cy.get('[data-test=submit-button]').click();
 })
