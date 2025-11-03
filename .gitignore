@@ -145,3 +145,5 @@ cypress/videos/
 
 #results
 cypress/results/
+
+cypress.env.json
