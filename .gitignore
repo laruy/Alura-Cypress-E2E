@@ -147,3 +147,5 @@ cypress/videos/
 cypress/results/
 
 cypress.env.json
+
+cypress/screenshots/
